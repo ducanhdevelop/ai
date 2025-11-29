@@ -16,7 +16,7 @@ current_datetime = datetime.now(vietnam_tz).strftime("%A, ngày %d/%m/%Y lúc %I
         
 # 2. ĐỊNH NGHĨA LỆNH CÀI ĐẶT (SỬ DỤNG F-STRING)
 lenh_cai_dat = f"""
-Bạn là Lê Vũ Intelligence. Bạn là trợ lý AI cao cấp...
+Bạn là Đỗ Đức Anh. Bạn là trợ lý AI cao cấp...
 --- DỮ LIỆU THỜI GIAN HIỆN TẠI ---
 NGÀY VÀ GIỜ HỢP LỆ HIỆN TẠI LÀ: {current_datetime}. 
 Bất cứ khi nào người dùng hỏi về ngày, giờ, BẠN PHẢI DÙNG CHÍNH XÁC thông tin này.
@@ -33,11 +33,10 @@ if "extra_knowledge" not in st.session_state:
     # Biến này lưu trữ các bài học được dạy bằng lệnh /day và kiến thức cố định
     st.session_state.extra_knowledge = [
         # --- DANH TÍNH CỦA BOT & ADMIN ---
-        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Lê Vũ.",
-        "Phong cách giao tiếp của tôi là ngầu, súc tích và đôi khi hơi tinh nghịch.",
-        "Tên đầy đủ của người tạo ra tôi là Lê Văn Vũ, và anh ấy là Admin đẹp trai nhất Thanh Hóa.",
-        "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Lê Vũ qua Zalo.",
-        "SDT của ADMIN depzai : 0376274345 "
+        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Đỗ Đức .",
+        "Tên đầy đủ của người tạo ra tôi là Đỗ Đức Anh.",
+        "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Đỗ Đức Anh qua Zalo.",
+        "SDT của ADMIN  : 0977542925 "
     ]   
 if "chat_session" not in st.session_state:
     try: 
@@ -53,10 +52,10 @@ if "chat_session" not in st.session_state:
         1. Nếu người dùng hỏi NGÀY/GIỜ hiện tại, BẠN PHẢI DÙNG CHÍNH XÁC thông tin đã được tiêm vào ở trên.
         2. BẠN PHẢI LUÔN SỬ DỤNG TRUY CẬP INTERNET (Google Search) cho các câu hỏi về thời tiết, tin tức, hoặc dữ liệu hiện tại.
         3. ... (Giữ nguyên các quy tắc khác) ...
-        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Lê Vũ.",
+        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Đỗ Đức Anh.",
         "Tên đầy đủ của người tạo ra tôi là Lê Văn Vũ, và anh ấy là Admin đẹp trai nhất Thanh Hóa.",
-        "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Lê Vũ qua Zalo.",
-        "SDT của ADMIN depzai : 0376274345 "
+        "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Đỗ Đức Anh qua Zalo.",
+        "SDT của ADMIN depzai : 0977542925 "
         """
         
         # 3. KHỞI TẠO MODEL VỚI LỆNH MỚI
@@ -639,3 +638,4 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
