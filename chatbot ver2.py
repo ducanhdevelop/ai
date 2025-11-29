@@ -639,71 +639,26 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
 
             st.error(f"Lỗi: {e}")
 
-st.markdown("""
-<style>
-
-/* Force xoá mọi border, shadow, outline trong toàn trang */
-* {
-    box-shadow: none !important;
-    outline: none !important;
-    border: none !important;
+/* TẮT TOÀN BỘ VIỀN NEON TOÀN MÀN HÌNH */
+body::before,
+body::after {
+    display: none !important;
 }
 
-/* Xoá viền focus */
-*:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* Xoá viền input Streamlit */
-input, textarea, select {
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
-
-/* Xoá viền focus webkit */
-input:focus, textarea:focus, select:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Xoá shadow của các container Streamlit */
-div[data-testid="stChatMessage"],
-div[data-testid="stMarkdown"],
-div[data-testid="stTextInput"],
-div[data-testid="stVerticalBlock"],
-.stChatMessage,
-.stTextInput,
-.st-emotion-cache-* {
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
-
-/* Xoá glow của form, button, select */
-button, button:focus, button:hover, button:active {
-    box-shadow: none !important;
-    outline: none !important;
-    border: none !important;
-}
-
-/* Xoá animation 7 màu nếu có */
-[class*="rainbow"], [class*="glow"], [class*="shine"], [class*="loader"] {
+/* TẮT VIỀN NEON KHUNG CHAT INPUT */
+.stChatInputContainer > div {
+    background: none !important;
     animation: none !important;
-    box-shadow: none !important;
-    border: none !important;
 }
 
-/* Chặn shadow root (::part, ::before, ::after) */
-*:before, *:after {
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
+/* TẮT VIỀN LIQUID-GLASS CHO TIN NHẮN */
+.liquid-glass::before,
+.liquid-glass::after {
+    display: none !important;
 }
 
-</style>
-""", unsafe_allow_html=True)
-
-
+/* XÓA VIỀN NHẸ BÊN TRONG */
+.liquid-glass {
+    border: none !important;
+    backdrop-filter: blur(2px) !important;
+}
