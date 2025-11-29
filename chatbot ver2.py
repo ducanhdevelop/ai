@@ -146,7 +146,7 @@ def kiem_tra_dang_nhap(input_key, input_sdt):
     """Kiểm tra đăng nhập cho User Key hoặc Admin Pass"""
     # 1. Kiểm tra Admin
     if input_key == ADMIN_PASSWORD and input_sdt == SDT_ADMIN:
-        return True, "admin", "Chào Sếp Vũ!"
+        return True, "admin", "Chào Đỗ Đức Anh!"
     
     # 2. Kiểm tra User Key
     data = load_data()
@@ -638,6 +638,7 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
 
 
 
