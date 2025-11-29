@@ -639,4 +639,65 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
 
             st.error(f"Lỗi: {e}")
 
+st.markdown("""
+<style>
+
+/* XÓA MỌI KIỂU VIỀN SÁNG / GLOW / SHADOW */
+* {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* XÓA VIỀN GLOW KHI FOCUS INPUT */
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #555 !important;
+}
+
+/* XÓA VIỀN GLOW WEBKIT (CHROME, EDGE) */
+input::-webkit-focus-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* XÓA TOÀN BỘ BORDER COLOR TỰ ĐỘNG */
+*:focus {
+    border-color: #555 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* XÓA GLOW CỦA BUTTON */
+button:hover, button:focus, button:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* XÓA GLOW CỦA CONTAINER STREAMLIT */
+div, section, header, footer {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* XÓA GLOW NẾU BẠN CÓ LOADER ANIMATION 7 MÀU */
+@keyframes rainbowGlow { 
+    from { box-shadow: none; } 
+    to { box-shadow: none; }
+}
+
+/* XÓA TẤT CẢ ANIMATION VIỀN SÁNG */
+[class*="rainbow"], 
+[class*="glow"], 
+[class*="shine"], 
+[class*="loader"], 
+[class*="thinking"] {
+    animation: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 
