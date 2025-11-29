@@ -639,26 +639,3 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
 
             st.error(f"Lỗi: {e}")
 
-/* TẮT TOÀN BỘ VIỀN NEON TOÀN MÀN HÌNH */
-body::before,
-body::after {
-    display: none !important;
-}
-
-/* TẮT VIỀN NEON KHUNG CHAT INPUT */
-.stChatInputContainer > div {
-    background: none !important;
-    animation: none !important;
-}
-
-/* TẮT VIỀN LIQUID-GLASS CHO TIN NHẮN */
-.liquid-glass::before,
-.liquid-glass::after {
-    display: none !important;
-}
-
-/* XÓA VIỀN NHẸ BÊN TRONG */
-.liquid-glass {
-    border: none !important;
-    backdrop-filter: blur(2px) !important;
-}
