@@ -176,7 +176,7 @@ def kiem_tra_dang_nhap(input_key, input_sdt):
 st.markdown("""
 <style>
     [data-testid="stAppViewContainer"] {
-        background-image: url("https://i.imgur.com/JdVytRx.jpeg"); 
+        background-image: url("https://i.imgur.com/ly7pJFK.png"); 
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -705,4 +705,5 @@ button, button:focus, button:hover, button:active {
 
 </style>
 """, unsafe_allow_html=True)
+
 
