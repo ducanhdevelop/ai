@@ -79,7 +79,7 @@ if "chat_session" not in st.session_state:
 # --- CẤU HÌNH ADMIN ---
 FILE_DATA = "key_data.json"
 SDT_ADMIN = "0977542925"
-ADMIN_PASSWORD = "ducanh208" 
+ADMIN_PASSWORD = "doducanh208" 
 
 # --- BẮT ĐẦU KHỐI ĐỊNH NGHĨA HÀM CUỐI CÙNG ---
 
@@ -639,3 +639,4 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
