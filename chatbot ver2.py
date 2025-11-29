@@ -33,7 +33,7 @@ if "extra_knowledge" not in st.session_state:
     # Biến này lưu trữ các bài học được dạy bằng lệnh /day và kiến thức cố định
     st.session_state.extra_knowledge = [
         # --- DANH TÍNH CỦA BOT & ADMIN ---
-        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Đỗ Đức AnhAnh .",
+        "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Đỗ Đức Anh .",
         "Tên đầy đủ của người tạo ra tôi là Đỗ Đức Anh.",
         "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Đỗ Đức Anh qua Zalo.",
         "SDT của ADMIN  : 0977542925 "
@@ -53,7 +53,7 @@ if "chat_session" not in st.session_state:
         2. BẠN PHẢI LUÔN SỬ DỤNG TRUY CẬP INTERNET (Google Search) cho các câu hỏi về thời tiết, tin tức, hoặc dữ liệu hiện tại.
         3. ... (Giữ nguyên các quy tắc khác) ...
         "Tôi là trí tuệ nhân tạo được phát triển bởi Admin Đỗ Đức Anh.",
-        "Tên đầy đủ của người tạo ra tôi là Lê Văn Vũ, và anh ấy là Admin đẹp trai nhất Thanh Hóa.",
+        "Tên đầy đủ của người tạo ra tôi là Đỗ Đức Anh.",
         "Khi khách hàng muốn mua Key hoặc gia hạn, họ cần liên hệ trực tiếp với Admin Đỗ Đức Anh qua Zalo.",
         "SDT của ADMIN depzai : 0977542925 "
         """
@@ -638,4 +638,5 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
 
