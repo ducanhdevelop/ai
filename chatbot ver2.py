@@ -642,62 +642,66 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
 st.markdown("""
 <style>
 
-/* XÓA MỌI KIỂU VIỀN SÁNG / GLOW / SHADOW */
+/* Force xoá mọi border, shadow, outline trong toàn trang */
 * {
     box-shadow: none !important;
-    text-shadow: none !important;
-}
-
-/* XÓA VIỀN GLOW KHI FOCUS INPUT */
-input:focus, textarea:focus, select:focus, button:focus {
     outline: none !important;
-    box-shadow: none !important;
-    border: 1px solid #555 !important;
+    border: none !important;
 }
 
-/* XÓA VIỀN GLOW WEBKIT (CHROME, EDGE) */
-input::-webkit-focus-inner {
-    border: 0 !important;
-    box-shadow: none !important;
-}
-
-/* XÓA TOÀN BỘ BORDER COLOR TỰ ĐỘNG */
+/* Xoá viền focus */
 *:focus {
-    border-color: #555 !important;
     outline: none !important;
-    box-shadow: none !important;
-}
-
-/* XÓA GLOW CỦA BUTTON */
-button:hover, button:focus, button:active {
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* XÓA GLOW CỦA CONTAINER STREAMLIT */
-div, section, header, footer {
     box-shadow: none !important;
     border: none !important;
 }
 
-/* XÓA GLOW NẾU BẠN CÓ LOADER ANIMATION 7 MÀU */
-@keyframes rainbowGlow { 
-    from { box-shadow: none; } 
-    to { box-shadow: none; }
+/* Xoá viền input Streamlit */
+input, textarea, select {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
 }
 
-/* XÓA TẤT CẢ ANIMATION VIỀN SÁNG */
-[class*="rainbow"], 
-[class*="glow"], 
-[class*="shine"], 
-[class*="loader"], 
-[class*="thinking"] {
+/* Xoá viền focus webkit */
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Xoá shadow của các container Streamlit */
+div[data-testid="stChatMessage"],
+div[data-testid="stMarkdown"],
+div[data-testid="stTextInput"],
+div[data-testid="stVerticalBlock"],
+.stChatMessage,
+.stTextInput,
+.st-emotion-cache-* {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Xoá glow của form, button, select */
+button, button:focus, button:hover, button:active {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+/* Xoá animation 7 màu nếu có */
+[class*="rainbow"], [class*="glow"], [class*="shine"], [class*="loader"] {
     animation: none !important;
     box-shadow: none !important;
     border: none !important;
 }
 
+/* Chặn shadow root (::part, ::before, ::after) */
+*:before, *:after {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
-
-
