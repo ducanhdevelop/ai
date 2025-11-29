@@ -414,7 +414,7 @@ if "user_role" not in st.session_state:
     # 1. LOGO LE VU INTELLIGENCE (TOP RIGHT)
 st.markdown(f"""
 <div class="logo-glow header-logo-fixed">
-    Le Vu Intelligence
+    Đức Anh Developer
 </div>
 """, unsafe_allow_html=True)
 
@@ -638,6 +638,7 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
 
 
 
