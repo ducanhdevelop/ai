@@ -41,7 +41,7 @@ if "extra_knowledge" not in st.session_state:
 if "chat_session" not in st.session_state:
     try: 
         lenh_cai_dat = f"""
-        Bạn là Lê Vũ Intelligence. Bạn là trợ lý AI cao cấp...
+        Bạn là Bi. Bạn là trợ lý AI cao cấp...
         
         --- DỮ LIỆU THỜI GIAN HIỆN TẠI ---
         NGÀY VÀ GIỜ HỢP LỆ HIỆN TẠI LÀ: {current_datetime}. 
@@ -638,5 +638,6 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
 
 
