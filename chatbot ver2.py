@@ -1,3 +1,24 @@
+import json
+import os
+
+LOGIN_FILE = "login_data.json"
+
+def save_login(sdt, key, role):
+    data = {"sdt": sdt, "key": key, "role": role}
+    with open(LOGIN_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
+def load_login():
+    if os.path.exists(LOGIN_FILE):
+        with open(LOGIN_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+def clear_login():
+    if os.path.exists(LOGIN_FILE):
+        os.remove(LOGIN_FILE)
+
+
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
@@ -638,6 +659,7 @@ if user_input: # Chỉ gửi khi người dùng nhập chữ và nhấn Enter
         with chat_container:
 
             st.error(f"Lỗi: {e}")
+
 
 
 
